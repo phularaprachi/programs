@@ -1,0 +1,577 @@
+<html>
+<head>
+<title>function</title>
+  
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background: rgb(150, 178, 240);
+    margin: 0;
+    padding: 0;
+  }
+
+  
+
+  h1 {
+    text-align: center;
+    background: #4e83d7;
+   color: #000000;
+    padding: 15px;
+    margin: 0;
+  }
+
+  .program {
+    background: white;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 800px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+  }
+
+  .program h2 {
+    color: #000000;
+    margin-top: 0;
+  }
+
+  .question {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  pre {
+    background: #272822;
+    color: #f8f8f2;
+    padding: 10px;
+    border-radius: 5px;
+  }
+    .btn-container {
+    margin-top: 60px;
+  }
+
+  .btn {
+    display: inline-block;
+    background: white;
+  color: #9393df;
+    border: none;
+    padding: 15px 35px;
+    margin: 15px;
+    font-size: 20px;
+    border-radius: 8px;
+    
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  }
+
+  .btn:hover {
+    background: #333;
+    color: white;
+    transition: 0.3s;
+  }
+</style>
+</head>
+
+<body>
+
+  <h1>C ++ PROGRAMMS</h1>
+
+
+  <div id="basic" class="program">
+    <h2>Inheritence Questions</h2>
+
+    <p class="question">1. C++ Program to convert String to int</p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+    #include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string str = "100";
+    int num = stoi(str);
+
+    cout << num;
+    return 0;
+}
+
+</xmp>
+    </pre>
+    <h3>Output:</h3>
+    <pre>
+String: 1234
+Integer: 1234
+    </pre>
+  </div>
+
+  <div class="program">
+    <p class="question">2. C++ Program to convert int to String</p>
+    <h3>Code:</h3>
+    <pre>
+        <xmp>
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    int num = 1234;
+
+    string str = to_string(num);   // Convert int to string
+
+    cout << "Integer: " << num << endl;
+    cout << "String: " << str << endl;
+
+    return 0;
+}
+
+    </pre>
+    <h3>Output:</h3>
+    <pre>
+        Integer: 1234
+String: 1234
+    </pre>
+  </div>
+
+  <div class="program">
+    <p class="question">3. C++ Program to convert String to long</p>
+    <h3>Code:</h3>
+    <pre>
+        <xmp>
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string str = "123456";
+    
+    long num = stol(str);   // Convert string to long
+
+    cout << "String: " << str << endl;
+    cout << "Long: " << num << endl;
+
+    return 0;
+}
+
+</xmp>
+    </pre>
+    <h3>Output:</h3>
+    <pre>
+        String: 123456
+Long: 123456
+</pre>
+  </div>
+
+  <div class="program">
+    <p class="question">4. C++ Program to convert long to String</p>
+    <h3>Code:</h3>
+    <pre><xmp>
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    long  num = 123456789;
+
+    string str = to_string(int); 
+
+    cout << "Long: " << long<< endl;
+    cout << "String: " << str << endl;
+
+    return 0;
+}
+</xmp>
+    </pre>
+    <h3>Output:</h3>
+    <pre>
+Long: 123456789
+String: 123456789
+    </pre>
+  </div>
+
+  <div class="program">
+    <p class="question">5. C++ Program to convert String to float</p>
+    <h3>Code:</h3>
+    <pre>
+        <xmp>
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string str = "123.45";
+
+    float num = stof(str);
+    cout << "String: " << str << endl;
+    cout << "Float: " << num << endl;
+
+    return 0;
+}
+</xmp>
+
+    </pre>
+    <h3>Output:</h3>
+    <pre>
+String: 123.45
+Float: 123.45
+    </pre>
+  </div>
+
+  <div class="program">
+    <p class="question">6. C++ Program to convert float to String</p>
+    <h3>Code:</h3>
+    <pre>
+        <xmp>
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    float num = 123.45;
+
+    string str = to_string(num);  
+
+    cout << "Float: " << num << endl;
+    cout << "String: " << str << endl;
+
+    return 0;
+}
+        </xmp>
+
+    </pre>
+    <h3>Output:</h3>
+    <pre>
+Float: 123.45
+String: 123.450000
+    </pre>
+  </div>
+
+  <div class="program">
+    <p class="question">7. C++ Program to convert String to double</p>
+    </p>
+    <h3>Code:</h3>
+    <pre>
+        <xmp>
+##include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    float num = 123.45;
+
+    string str = to_string(num);   // Convert float to string
+
+    cout << "Float: " << num << endl;
+    cout << "String: " << str << endl;
+
+    return 0;
+}
+</xmp>
+    </pre>
+    <h3>Output:</h3>
+    <pre>
+ Float: 123.45
+String: 123.450000
+    </pre>
+  </div>
+
+  <div class="program">
+    <p class="question">8. C++ Program to convert double to String.</p>
+    <h3>Code:</h3>
+    <pre>
+        <xmp>
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string str = "123.456";
+
+    double num = stod(str);  
+
+    cout << "String: " << str << endl;
+    cout << "Double: " << num << endl;
+
+    return 0;
+}
+</xmp>
+    </pre>
+    <h3>Output:</h3>
+    <pre>
+String: 123.456
+Double: 123.456
+    </pre>
+  </div>
+
+    <div class="program">
+    <p class="question">9. C++ Program to convert char to int</p>
+    <h3>Code:</h3>
+    <pre>
+        <xmp>
+#include <iostream>
+using namespace std;
+
+int main() {
+    char ch = '5';
+
+    int num = ch - '0'; 
+cout << "Character: " << ch << endl;
+    cout << "Integer: " << num << endl;
+
+    return 0;
+}
+</xmp>
+    </pre>
+    <h3>Output:</h3>
+    <pre>
+Character: 5
+Integer: 5
+    </pre>
+  </div>
+
+    <div class="program">
+    <p class="question">10. C++ Program to convert int to char</p>
+    <h3>Code:</h3>
+    <pre>
+        <xmp>
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num = 5;
+
+    char ch = num + '0';  
+
+    cout << "Integer: " << num << endl;
+    cout << "Character: " << ch << endl;
+
+    return 0;
+}
+</xmp>
+    </pre>
+    <h3>Output:</h3>
+    <pre>
+Integer: 5
+Character: 5
+    </pre>
+  </div>
+  <div class="program">
+    <p class="question">11. C++ Program to convert Binary to Decimal</p>
+    <h3>Code:</h3>
+    <pre>
+        <xmp>
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    int binary, decimal = 0, i = 0, remainder;
+
+    cout << "Enter a binary number: ";
+    cin >> binary;
+
+    while (binary != 0) {
+        remainder = binary % 10;
+        decimal += remainder * pow(2, i);
+        binary /= 10;
+        i++;
+    }
+
+    cout << "Decimal equivalent: " << decimal;
+
+    return 0;
+}
+</xmp>
+    </pre>
+    <h3>Output:</h3>
+    <pre>
+Enter a binary number: 1011
+Decimal equivalent: 11
+    </pre>
+  </div>
+  <div class="program">
+    <p class="question">12. C++ Program to convert Decimal to Binary</p>
+    <h3>Code:</h3>
+    <pre>
+        <xmp>
+#include <iostream>
+using namespace std;
+
+int main() {
+    int decimal, binary[32], i = 0;
+    cout << "Enter a decimal number: ";
+    cin >> decimal;
+    while (decimal > 0) {
+        binary[i] = decimal % 2;  
+        decimal = decimal / 2;
+        i++;
+    }
+    cout << "Binary equivalent: ";
+    for (int j = i - 1; j >= 0; j--) {
+        cout << binary[j];
+    }
+    return 0;
+}
+</xmp>
+    </pre>
+    <h3>Output:</h3>
+    <pre>
+Enter a decimal number: 10
+Binary equivalent: 1010
+    </pre>
+  </div>
+  <div class="program">
+    <p class="question">13. C++ Program to convert Hex to Decimal</p>
+    <h3>Code:</h3>
+    <pre>
+        <xmp>
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string hex = "1A";
+
+    int decimal = stoi(hex, 0, 16);
+
+    cout << "Decimal equivalent: " << decimal;
+
+    return 0;
+}
+</xmp>
+    </pre>
+    <h3>Output:</h3>
+    <pre>
+Enter a hexadecimal number: 1A
+Decimal equivalent: 26
+    </pre>
+  </div>
+
+<div class="program">
+    <p class="question">14. C++ Program to convert Decimal to Hex</p>
+    <h3>Code:</h3>
+    <pre>
+        <xmp>
+#include <iostream>
+using namespace std;
+
+int main() {
+    int decimal, remainder;
+    char hex[50];
+    int i = 0;
+
+    cout << "Enter a decimal number: ";
+    cin >> decimal;
+
+    while (decimal > 0) {
+        remainder = decimal % 16;
+
+        if (remainder < 10)
+            hex[i] = remainder + '0';
+        else
+            hex[i] = remainder - 10 + 'A';
+
+        decimal = decimal / 16;
+        i++;
+    }
+
+    cout << "Hexadecimal equivalent: ";
+    for (int j = i - 1; j >= 0; j--) {
+        cout << hex[j];
+    }
+
+    return 0;
+}
+</xmp>
+    </pre>
+    <h3>Output:</h3>
+    <pre>
+Enter a decimal number: 26
+Hexadecimal equivalent: 1A
+    </pre>
+  </div>
+  <div class="program">
+    <p class="question">15. C++ Program to convert Octal to Decimal</p>
+    <h3>Code:</h3>
+    <pre>
+        <xmp>
+            #include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    int octal, decimal = 0, i = 0, remainder;
+
+    cout << "Enter an octal number: ";
+    cin >> octal;
+
+    while (octal != 0) {
+        remainder = octal % 10;
+        decimal += remainder * pow(8, i);
+        octal /= 10;
+        i++;
+    }
+
+    cout << "Decimal equivalent: " << decimal;
+
+    return 0;
+}
+        </xmp>
+</pre>
+
+<h3>Output:</h3>
+    <pre>
+Enter an octal number: 17
+Decimal equivalent: 15
+    </pre>
+  </div>
+
+
+
+     <div class="program">
+    <p class="question">16. C++ Program to convert Decimal to Octal</p>
+    <h3>Code:</h3>
+    <pre>
+        <xmp>
+        #include <iostream>
+using namespace std;
+
+int main() {
+    int decimal, octal[32], i = 0;
+
+    cout << "Enter a decimal number: ";
+    cin >> decimal;
+    while (decimal > 0) {
+        octal[i] = decimal % 8;  
+        decimal = decimal / 8;
+        i++;
+    }
+
+    cout << "Octal equivalent: ";
+    for (int j = i - 1; j >= 0; j--) {
+        cout << octal[j];
+    }
+
+    return 0;
+}
+        </xmp>
+</pre>
+
+<h3>Output:</h3>
+    <pre>
+Enter a decimal number: 15
+Octal equivalent: 17
+    </pre>
+  </div>
+
+  
+
+  
+
+  
+  <div class="btn-container">
+    <a href="index.html" class="btn">Home</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,1670 @@
+<html>
+<head>
+<title>function</title>
+  
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background: rgb(150, 178, 240);
+    margin: 0;
+    padding: 0;
+  }
+
+  
+
+  h1 {
+    text-align: center;
+    background: #4e83d7;
+   color: #000000;
+    padding: 15px;
+    margin: 0;
+  }
+
+  .program {
+    background: white;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 800px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+  }
+
+  .program h2 {
+    color: #000000;
+    margin-top: 0;
+  }
+
+  .question {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  pre {
+    background: #272822;
+    color: #f8f8f2;
+    padding: 10px;
+    border-radius: 5px;
+  }
+    .btn-container {
+    margin-top: 60px;
+  }
+
+  .btn {
+    display: inline-block;
+    background: white;
+  color: #9393df;
+    border: none;
+    padding: 15px 35px;
+    margin: 15px;
+    font-size: 20px;
+    border-radius: 8px;
+    
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  }
+
+  .btn:hover {
+    background: #333;
+    color: white;
+    transition: 0.3s;
+  }
+</style>
+</head>
+
+<body>
+
+  <h1>C ++ PROGRAMS</h1>
+
+
+  <div id="basic" class="program">
+    <h2>Strings Questions</h2>
+
+    <p class="question">1. Program to Swapping Pair of Characters?</p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+    #include<iostream>
+using namespace std;
+int main()
+{
+    char str[50];
+    char temp;
+    cout<<"Enter string: ";
+    cin>>str;
+    for(int i=0;str[i]!='\0';i=i+2)
+    {
+        if(str[i+1]!='\0')
+        {
+            temp=str[i];
+            str[i]=str[i+1];
+            str[i+1]=temp;
+        }
+    }
+    cout<<"After swapping: "<<str;
+    return 0;
+}
+</xmp>
+
+    </pre>
+    <h3>Output:</h3>
+    <pre>
+Enter string: hello
+After swapping: ehllo
+    
+    </pre>
+  </div>
+
+  <div class="program">
+    <p class="question">2. Program to Check if a String contains only digits?</p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+    #include<iostream>
+using namespace std;
+int main()
+{
+    char str[50];
+    int i,flag=1;
+    cout<<"Enter string: ";
+    cin>>str;
+    for(i=0;str[i]!='\0';i++)
+    {
+        if(str[i]<'0'||str[i]>'9')
+        {
+            flag=0;
+            break;
+        }
+    }
+    if(flag==1)
+        cout<<"Only digits";
+    else
+        cout<<"Not only digits";
+    return 0;
+}
+</xmp>
+    </pre>
+    <h3>Output:</h3>
+    <pre>
+Enter string: hello
+Not only digits
+    
+    </pre>
+  </div>
+
+  <div class="program">
+    <p class="question">3. Program to remove all occurrences of a given character from input String??</p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+    #include<iostream>
+using namespace std;
+int main()
+{
+    char str[50],ch;
+    int i,j=0;
+    cout<<"Enter string: ";
+    cin>>str;
+    cout<<"Enter character to remove: ";
+    cin>>ch;
+    for(i=0;str[i]!='\0';i++)
+    {
+        if(str[i]!=ch)
+        {
+            str[j]=str[i];
+            j++;
+        }
+    }
+    str[j]='\0';
+    cout<<"After removing: "<<str;
+    return 0;
+}
+</xmp>
+    </pre>
+    <h3>Output:</h3>
+    <pre>
+Enter string: hello
+Enter character to remove: o
+After removing: hell
+  </div>
+
+  <div class="program">
+    <p class="question">4. Program to Add Characters to a String?</p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+    #include<iostream>
+using namespace std;
+int main()
+{
+    char str[50];
+    char ch;
+    int i;
+    cout<<"Enter string: ";
+    cin>>str;
+    cout<<"Enter character: ";
+    cin>>ch;
+    for(i=0;str[i]!='\0';i++){
+    }
+    str[i]=ch;
+    i++;
+    str[i]='\0';
+    cout<<"New string: "<<str;
+    return 0;
+}
+
+</xmp>
+</pre>
+    <h3>Output:</h3>
+    <pre>
+Enter string: bye
+Enter character: h
+New string: byeh 
+    </pre>
+  </div>
+
+  <div class="program">
+    <p class="question">5. Program to check whether a string is a Palindrome?</p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+    
+#include<iostream>
+using namespace std;
+int main()
+{
+    char str[50];
+    int i,j,flag=1;
+    cout<<"Enter string: ";
+    cin>>str;
+    for(i=0;str[i]!='\0';i++);
+    j=i-1;
+    for(i=0;i<j;i++,j--)
+    {
+        if(str[i]!=str[j])
+        {
+            flag=0;
+            break;
+        }
+    }
+    if(flag==1)
+        cout<<"Palindrome";
+    else
+        cout<<"Not Palindrome";
+    return 0;
+}
+
+</xmp>
+    </pre>
+    <h3>Output:</h3>
+    <pre>
+Enter string: Neha
+Not Palindrome
+
+Enter string: madam
+Palindrome
+    </pre>
+  </div>
+
+  <div class="program">
+    <p class="question">6. Program to Convert Enum to String ?</p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+    #include<iostream>
+using namespace std;
+enum Day{MON,TUE,WED};
+int main()
+{
+    int d;
+    cout<<"Enter number (0-2): ";
+    cin>>d;
+    if(d==0)
+        cout<<"MONDAY";
+    else if(d==1)
+        cout<<"TUESDAY";
+    else if(d==2)
+        cout<<"WEDNESDAY";
+    return 0;
+
+</xmp>
+</pre>
+    <h3>Output:</h3>
+    <pre>
+Enter number (0-2): 2
+WEDNESDAY
+    </pre>
+  </div>
+
+  <div class="program">
+    <p class="question">7. Program to count number of words in a String??</p>
+    <h3>Code:</h3>
+    <pre><xmp>
+        
+#include<iostream>
+using namespace std;
+int main()
+{
+    char str[100];
+    int i,count=1;
+    cout<<"Enter string: ";
+    cin.getline(str,100);
+    for(i=0;str[i]!='\0';i++){
+        if(str[i]==' ')
+            count++;
+    }
+    cout<<"Number of words: "<<count;
+    return 0;
+}
+
+    </xmp></pre>
+    <h3>Output:</h3>
+    <pre>
+Enter string: I am student
+Number of words: 3
+    </pre>
+  </div>
+
+  <div class="program">
+    <p class="question">8. Program to count the total number of characters in a string</p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+    
+#include<iostream>
+using namespace std;
+int main()
+{
+    char str[100];
+    int i,count=0;
+    cout<<"Enter string: ";
+    cin.getline(str,100);
+    for(i=0;str[i]!='\0';i++){
+        count++;
+    }
+    cout<<"Total characters: "<<count;
+    return 0;
+}
+</xmp>
+</pre>
+    <h3>Output:</h3>
+    <pre>
+Enter string: Hello
+Total characters: 5
+    </pre>
+  </div>
+
+  <div class="program">
+    <p class="question">9. Program to count the total number of punctuation characters exists in a String </p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+    #include<iostream>
+using namespace std;
+int main()
+{
+    char str[100];
+    int i,count=0;
+    cout<<"Enter string: ";
+    cin.getline(str,100);
+    for(i=0;str[i]!='\0';i++)
+    {
+        if(str[i]=='.'||str[i]==','||str[i]=='!'|| 
+           str[i]=='?'||str[i]==';'||str[i]==':'){
+            count++;
+        }
+    }
+    cout<<"Punctuation count: "<<count;
+    return 0;
+}
+
+</xmp>
+</pre>
+    <h3>Output:</h3>
+    <pre>
+enter string: Hello, how are you?
+Punctuation count: 2 
+    </pre>
+  </div>
+  
+<div class="program">
+    <p class="question">10. Program to determine whether one string is a rotation of another</p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+    #include<iostream>
+using namespace std;
+int main()
+{
+    char s1[50],s2[50],temp[100];
+    int i,j,found=0;
+    cout<<"Enter first string: ";
+    cin>>s1;
+    cout<<"Enter second string: ";
+    cin>>s2;
+    for(i=0;s1[i]!='\0';i++){
+        temp[i]=s1[i];
+    }
+    for(j=0;s1[j]!='\0';j++){
+        temp[i+j]=s1[j];
+    }
+    temp[i+j]='\0';
+    for(i=0;temp[i]!='\0';i++)
+    {
+        for(j=0;s2[j]!='\0';j++){
+            if(temp[i+j]!=s2[j])
+                break;
+        }
+        if(s2[j]=='\0')
+        {
+            found=1;
+            break;
+        }
+    }
+    if(found==1)
+        cout<<"Rotation";
+    else
+        cout<<"Not Rotation";
+    return 0;
+}
+</xmp>
+</pre>
+    <h3>Output:</h3>
+    <pre>
+
+Enter first string: abcde
+Enter second string: eabcd
+Rotation
+    
+    </pre>
+  </div>
+  
+<div class="program">
+    <p class="question">11. Program to divide a string in 'N' equal parts.</p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+    #include<iostream>
+using namespace std;
+int main()
+{
+    char str[50];
+    int n,i,j,len=0;
+    cout<<"Enter string: ";
+    cin>>str;
+    cout<<"Enter parts: ";
+    cin>>n;
+    for(i=0;str[i]!='\0';i++)
+        len++;
+    if(len%n!=0){
+        cout<<"Not possible";
+        return 0;
+    }
+    int size=len/n;
+    for(i=0;i<len;i=i+size){
+        for(j=0;j<size;j++)
+            cout<<str[i+j];
+        cout<<endl;
+    }
+    return 0;
+}
+</xmp>
+</pre>
+    <h3>Output:</h3>
+    <pre>
+Enter string: abcdef
+Enter parts: 3
+ab
+cd
+ef
+    
+    </pre>
+  </div>
+  
+  <div class="program">
+    <p class="question">12. Program to find all the permutations of a string ?</p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+    #include<iostream>
+using namespace std;
+void swap(char &a,char &b)
+{
+    char temp=a;
+    a=b;
+    b=temp;
+}
+void permute(char str[],int l,int r)
+{
+    int i;
+    if(l==r)
+    {
+        cout<<str<<endl;
+        return;
+    }
+    for(i=l;i<=r;i++)
+    {
+        swap(str[l],str[i]);
+        permute(str,l+1,r);
+        swap(str[l],str[i]);  
+    }
+}
+int main()
+{
+    char str[10];
+    cout<<"Enter string: ";
+    cin>>str;
+    int len=0;
+    while(str[len]!='\0')
+        len++;
+    permute(str,0,len-1);
+    return 0;
+}
+</xmp>
+</pre>
+    <h3>Output:</h3>
+    <pre>
+Enter string: abc
+abc
+acb
+bac
+bca
+cba
+cab
+
+    </pre>
+  </div>
+
+  <div class="program">
+    <p class="question">13. Program to find maximum and minimum occurring character in a string?</p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+    #include<iostream>
+using namespace std;
+int main()
+{
+    char str[50];
+    int i,j,count,max=0,min=100;
+    char maxc,minc;
+    cout<<"Enter string: ";
+    cin>>str;
+    for(i=0;str[i]!='\0';i++)
+    {
+        count=0;
+        for(j=0;str[j]!='\0';j++){
+            if(str[i]==str[j])
+                count++;
+        }
+        if(count>max){
+            max=count;
+            maxc=str[i];
+        }
+        if(count<min){
+            min=count;
+            minc=str[i];
+        }
+    }
+    cout<<"Max char: "<<maxc<<endl;
+    cout<<"Min char: "<<minc;
+    return 0;
+}
+
+</xmp>
+</pre>
+    <h3>Output:</h3>
+    <pre>
+Enter string: hello
+Max char: l
+Min char: h%
+    </pre>
+  </div>
+  
+  
+  <div class="program">
+    <p class="question">14. rogram to find Reverse of the string</p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+    #include<iostream>
+#include<cstring>
+using namespace std;
+int main()
+{
+    char arr[50],str[50];
+    int i,l,j=0;
+    cout<<"Enter a string : ";
+    cin.getline(arr,50);   
+    l=strlen(arr);
+    for(i=l-1;i>=0;i--){
+        str[j]=arr[i];
+        j++;
+    }
+    str[j]='\0'; 
+    cout<<str;
+    return 0;
+}
+
+</xmp>
+</pre>
+    <h3>Output:</h3>
+    <pre>
+Enter string: hello
+olleh
+    </pre>
+  </div>
+
+  
+  <div class="program">
+    <p class="question">15. Program to find the duplicate characters in a string?</p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+    #include<iostream>
+using namespace std;
+int main()
+{
+    char str[50];
+    int i,j;
+    cout<<"Enter string: ";
+    cin>>str;
+    cout<<"Duplicate characters: ";
+    for(i=0;str[i]!='\0';i++){
+        for(j=i+1;str[j]!='\0';j++){
+            if(str[i]==str[j]){
+                cout<<str[i]<<" ";
+                break;  
+            }
+        }
+    }
+    return 0;
+}
+
+</xmp>
+</pre>
+    <h3>Output:</h3>
+    <pre>
+Enter string: hello
+Duplicate characters: l 
+    </pre>
+  </div>
+
+  
+  <div class="program">
+    <p class="question">16. Program to find the frequency of characters
+
+</p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+    #include<iostream>
+using namespace std;
+int main()
+{
+    char str[50];
+    int i,j,count;
+    cout<<"Enter string: ";
+    cin>>str;
+    for(i=0;str[i]!='\0';i++)
+    {
+        count=0;
+        for(j=0;str[j]!='\0';j++)
+        {
+            if(str[i]==str[j])
+                count++;
+        }
+        cout<<str[i]<<" = "<<count<<endl;
+    }
+    return 0;
+}
+</xmp>
+</pre>
+    <h3>Output:</h3>
+    <pre>
+Enter string: hello
+h = 1
+e = 1
+l = 2
+l = 2
+o = 1
+    </pre>
+  </div>
+
+  
+  <div class="program">
+    <p class="question">17. Program to find the largest and smallest word in a string</p>
+    <h3>Code:</h3>
+    <pre>
+        <xmp>
+            #include<iostream>
+using namespace std;
+int main()
+{
+    char str[100];
+    int i=0,len=0;
+    int max=0,min=100;
+    cout<<"Enter string: ";
+    cin.getline(str,100);
+    while(str[i]!='\0')
+    {
+        if(str[i]==' ')
+        {
+            if(len>max)max=len;
+            if(len<min)min=len;
+            len=0;
+        }
+        else{
+            len++;
+        }
+        i++;
+    }
+    if(len>max)max=len;
+    if(len<min)min=len;
+    cout<<"Largest word: ";
+    i=0;len=0;
+    while(str[i]!='\0'){
+        if(str[i]==' '){
+            if(len==max)
+            {
+                for(int j=i-len; j<i; j++)
+                    cout<<str[j];
+                break;
+            }
+            len=0;
+        }
+        else len++;
+        i++;
+    }
+    cout<<endl<<"Smallest word: ";
+    i=0;len=0;
+    while(str[i]!='\0'){
+        if(str[i]==' ')
+        {
+            if(len==min)
+            {
+                for(int j=i-len;j<i;j++)
+                    cout<<str[j];
+                break;
+            }
+            len=0;
+        }
+        else len++;
+        i++;
+    }
+    return 0;
+}
+
+        </xmp>
+</pre>
+    <h3>Output:</h3>
+    <pre>
+Enter string: I am learning cpp
+Largest word: learning
+Smallest word:
+    </pre>
+  </div>
+
+  
+  <div class="program">
+    <p class="question">18. Program to find the longest repeating sequence in a string</p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+    #include<iostream>
+using namespace std;
+int main()
+{
+    char str[50];
+    int i,j,count,max=0;
+    char maxc;
+    cout<<"Enter string: ";
+    cin>>str;
+    for(i=0;str[i]!='\0';i++){
+        count=0;
+        for(j=0;str[j]!='\0';j++){
+            if(str[i]==str[j])
+                count++;
+        }
+        if(count>max){
+            max=count;
+            maxc=str[i];
+        }
+    }
+    cout<<"Longest repeating character: "<<maxc;
+    return 0;
+}
+
+</xmp>
+</pre>
+    <h3>Output:</h3>
+    <pre>
+Enter string: hello
+Longest repeating character: l
+    </pre>
+  </div>
+
+  <div class="program">
+    <p class="question">19. Program to Get a Character From the Given String</p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+    #include<iostream>
+using namespace std;
+int main(){
+    char str[50];
+    int i;
+    cout<<"Enter string: ";
+    cin>>str;
+    cout<<"Characters are: ";
+    for(i=0;str[i]!='\0';i++){
+        cout<<str[i]<<"  ";
+    }
+    return 0;
+}
+</xmp>
+</pre>
+    <h3>Output:</h3>
+    <pre>
+Enter string: hello
+Characters are: h  e  l  l  o 
+    
+    </pre>
+  </div>
+<div class="program">
+    <p class="question">20. Program to Insert a string into another string</p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+ #include<iostream>
+#include<cstring>
+using namespace std;
+int main(){
+    char str1[100],str2[50];
+    cout<<"Enter first string: ";
+    cin>>str1;
+    cout<<"Enter second string: ";
+    cin>>str2;
+    strcat(str1,str2);
+    cout<<"New string: "<<str1;
+    return 0;
+}   
+</xmp>
+</pre>
+    <h3>Output:</h3>
+    <pre>
+      Enter first string: hello
+Enter second string: bye
+New string: hellobye
+    
+    
+    </pre>
+  </div>
+<div class="program">
+    <p class="question">21. .Program to Print a New Line in String (Each word in newline)</p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+    #include<iostream>
+using namespace std;
+int main(){
+    char str[100];
+    int i;
+    cout<<"Enter string: ";
+    cin.getline(str,100);
+    for(i=0;str[i]!='\0';i++){
+        if(str[i]==' ')
+            cout<<endl;
+        else
+            cout<<str[i];
+    }
+    return 0;
+}
+</xmp>
+</pre>
+    <h3>Output:</h3>
+    <pre>
+Enter string: hello bye
+hello
+bye
+
+    
+    </pre>
+  </div>
+<div class="program">
+    <p class="question">22. Program to Print even length words</p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+  #include<iostream>
+using namespace std;
+int main(){
+    char str[100];
+    int i=0,len=0,start=0;
+    cout<<"Enter string: ";
+    cin.getline(str,100);
+    while(str[i]!='\0'){
+        if(str[i]==' '){
+            if(len%2==0){
+                for(int j=start;j<i;j++)
+                    cout<<str[j];
+                cout<<endl;
+            }
+            len=0;
+            start=i+1;
+        }
+        else{
+            len++;
+        }
+        i++;
+    }
+    if(len%2==0){
+        for(int j=start;j<i;j++)
+            cout<<str[j];
+    }
+    return 0;
+}
+  
+</xmp>
+</pre>
+    <h3>Output:</h3>
+    <pre>
+Enter string: helloohello
+helloo
+    
+    </pre>
+  </div>
+<div class="program">
+    <p class="question">23. Program to print smallest and biggest possible palindrome word in a given string </p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+    #include<iostream>
+#include<string.h>
+using namespace std;
+int main(){
+    char str[100],word[20];
+    int i=0,j=0;
+    char small[20]="",big[20]="";
+    cout<<"Enter string: ";
+    cin.getline(str,100);
+    while(1){
+        if(str[i]!=' '&&str[i]!='\0'){
+            word[j]=str[i];
+            j++;
+        }
+        else{
+            word[j]='\0';
+            int len=j,flag=1;
+            for(int k=0;k<len/2;k++){
+                if(word[k]!=word[len-1-k])
+                    flag=0;
+            }
+            if(flag==1 && len>0){
+                if(small[0]=='\0'||len<strlen(small))
+                    strcpy(small,word);
+                if(big[0]=='\0'||len>strlen(big))
+                    strcpy(big,word);
+            }
+            j=0;
+            if(str[i]=='\0')
+                break;
+        }
+        i++;
+    }
+    if(small[0]=='\0')
+        cout<<"No palindrome word";
+    else{
+        cout<<"Smallest: "<<small<<endl;
+        cout<<"Biggest: "<<big;
+    }
+    return 0;
+}
+</xmp>
+</pre>
+    <h3>Output:</h3>
+    <pre>
+Enter string: wow big level
+Smallest: wow
+Biggest: level
+    </pre>
+  </div>
+<div class="program">
+    <p class="question">24. .Program to remove all the white spaces from a string</p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+  #include<iostream>
+using namespace std;
+int main(){
+    char str[100];
+    int i;
+    cout<<"Enter string: ";
+    cin.getline(str,100);
+    cout<<"New string: ";
+    for(i=0;str[i]!='\0';i++){
+        if(str[i]!=' ')
+            cout<<str[i];
+    }
+    return 0;
+}
+
+</xmp>
+</pre>
+    <h3>Output:</h3>
+    <pre>
+Enter string: hello bye
+New string: hellobye
+    </pre>
+  </div>
+<div class="program">
+    <p class="question">25. Program to replace lower-case characters with upper-case and vice-versa</p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+#include<iostream>
+using namespace std;
+int main(){
+    char str[100];
+    int i;
+    cout<<"Enter string: ";
+    cin.getline(str,100);
+    for(i=0;str[i]!='\0';i++){
+        if(str[i]>='a'&&str[i]<='z')
+            str[i]=str[i]-32;
+        else if(str[i]>='A'&&str[i]<='Z')
+            str[i]=str[i]+32;
+    }
+    cout<<"New string: "<<str;
+    return 0;
+}
+  
+</xmp>
+</pre>
+    <h3>Output:</h3>
+    <pre>
+Enter string: hello
+New string: HELLO
+    </pre>
+  </div>
+<div class="program">
+    <p class="question">26. Program to replace the spaces of a string with a specific character</p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+    #include<iostream>
+using namespace std;
+int main(){
+    char str[100],ch;
+    int i;
+    cout<<"Enter string: ";
+    cin.getline(str,100);
+    cout<<"Enter character: ";
+    cin>>ch;
+    for(i=0;str[i]!='\0';i++){
+        if(str[i]==' ')
+            str[i]=ch;
+    }
+    cout<<"New string: "<<str;
+    return 0;
+}
+</xmp>
+</pre>
+    <h3>Output:</h3>
+    <pre>
+
+    Enter string: hello bye
+Enter character: _
+New string: hello_bye
+    </pre>
+  </div>
+<div class="program">
+    <p class="question">27. Program to separate the Individual Characters from a String</p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+    
+    #include<iostream>
+using namespace std;
+int main(){
+    char str[100];
+    int i;
+    cout<<"Enter string: ";
+    cin.getline(str,100);
+    for(i=0;str[i]!='\0';i++){
+        cout<<str[i]<<endl;
+    }
+    return 0;
+}
+
+</xmp>
+</pre>
+    <h3>Output:</h3>
+    <pre>
+Enter string: hello
+h
+e
+l
+l
+o
+    
+    </pre>
+  </div>
+<div class="program">
+    <p class="question">28. .Program to Splitting into a number of sub-strings</p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+  #include<iostream>
+using namespace std;
+int main(){
+    char str[100];
+    int n,len=0,i,count=0;
+    cout<<"Enter string: ";
+    cin.getline(str,100);
+    cout<<"Enter number of parts: ";
+    cin>>n;
+    for(i=0;str[i]!='\0';i++)
+        len++;
+    if(len%n!=0){
+        cout<<"Not possible";
+        return 0;
+    }
+    int size=len/n;
+    cout<<"Substrings:"<<endl;
+    for(i=0;str[i]!='\0';i++){
+        cout<<str[i];
+        count++;
+        if(count==size){
+            cout<<endl;
+            count=0;
+        }
+    }
+    return 0;
+}  
+</xmp>
+</pre>
+    <h3>Output:</h3>
+    <pre>
+Enter string: abcdef
+Enter number of parts: 3
+Substrings:
+ab
+cd
+ef
+    
+    
+    </pre>
+  </div>
+<div class="program">
+    <p class="question">29. Program to swap two string variables without using third or temp variable</p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+    #include<iostream>
+#include<cstring>
+using namespace std;
+int main(){
+    char a[100],b[100],temp[100];
+    cout<<"Enter first string: ";
+    cin>>a;
+    cout<<"Enter second string: ";
+    cin>>b;
+    strcpy(temp,a);
+    strcpy(a,b);
+    strcpy(b,temp);
+    cout<<"After swap:"<<endl;
+    cout<<"a = "<<a<<endl;
+    cout<<"b = "<<b;
+    return 0;
+}
+
+</xmp>
+</pre>
+    <h3>Output:</h3>
+    <pre>
+Enter first string: hey
+Enter second string: bye
+After swap:
+a = bye
+b = hey
+    
+    </pre>
+  </div>
+<div class="program">
+    <p class="question">30. Read two String user input and check if first contains second?
+
+</p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+   #include<iostream>
+using namespace std;
+int main(){
+    char a[100],b[50];
+    int i,j,count;
+    cout<<"Enter first string: ";
+    cin>>a;
+    cout<<"Enter second string: ";
+    cin>>b;
+    for(i=0;a[i]!='\0';i++){
+        count=0;
+        for(j=0;b[j]!='\0';j++){
+            if(a[i+j]==b[j])
+                count++;
+        }
+        if(count>0&&count==j){
+            cout<<"Yes, it contains";
+            return 0;
+        }
+    }
+    cout<<"No, it does not contain";
+    return 0;
+}
+</xmp>
+</pre>
+    <h3>Output:</h3>
+    <pre>
+Enter first string: helllo
+Enter second string: lo
+Yes, it contains
+    
+    
+    </pre>
+  </div>
+  <div class="program">
+    <p class="question">31. Reverse String Word by Word?
+
+</p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+   #include<iostream>
+using namespace std;
+int main(){
+    char str[50],word[10][10];
+    int i=0,j=0,w=0;
+    cout<<"Enter string: ";
+    cin.getline(str,50);
+    while(str[i]!='\0'){
+        if(str[i]!=' '){
+            word[w][j]=str[i];
+            j++;
+        }
+        else{
+            word[w][j]='\0';
+            w++;
+            j=0;
+        }
+        i++;
+    }
+    word[w][j]='\0'; 
+    for(i=w;i>=0;i--){
+        cout<<word[i]<<" ";
+    }
+    return 0;
+}
+</xmp>
+</pre>
+    <h3>Output:</h3>
+    <pre>
+Enter string: hello bye Neha
+Neha bye hello
+    
+    
+    </pre>
+  </div>
+  <div class="program">
+    <p class="question">32. Write a program to check if two Strings are created with same characters?</p><xmp>
+#include<iostream>
+#include<cstring>
+using namespace std;
+int main(){
+    char a[50],b[50];
+    int i,j,found;
+    cout<<"Enter first string: ";
+    cin>>a;
+    cout<<"Enter second string: ";
+    cin>>b;
+    if(strlen(a)!=strlen(b)){
+        cout<<"Not same characters";
+        return 0;
+    }
+    for(i=0;a[i]!='\0';i++){
+        found=0;
+        for(j=0;b[j]!='\0';j++){
+            if(a[i]==b[j]){
+                found=1;
+                break;
+            }
+        }
+        if(found==0){
+            cout<<"Not same characters";
+            return 0;
+        }
+    }
+    cout<<"Same characters";
+    return 0;
+}
+</xmp>
+</pre>
+    <h3>Output:</h3>
+    <pre>
+Enter first string: hello
+Enter second string: hellr
+Not same characters
+    
+    </pre>
+  </div>
+  <div class="program">
+    <p class="question">33. Write a program to find out first non repeated character from input String?
+
+</p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+  #include<iostream>
+using namespace std;
+int main(){
+    char str[100];
+    int i,j,count;
+    cout<<"Enter string: ";
+    cin>>str;
+    for(i=0;str[i]!='\0';i++){
+        count=0;
+        for(j=0;str[j]!='\0';j++){
+            if(str[i]==str[j])
+                count++;
+        }
+        if(count==1){
+            cout<<"First non-repeated character: "<<str[i];
+            return 0;
+        }
+    }
+    cout<<"No non-repeated character";
+    return 0;
+}
+
+</xmp>
+</pre>
+    <h3>Output:</h3>
+    <pre>
+Enter string: hello
+First non-repeated character: h
+
+Enter string: aabbcc
+No non-repeated character
+    
+    </pre>
+  </div>
+  <div class="program">
+    <p class="question">34. Write a C++ method to count all words in a string   ?
+
+</p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+   #include<iostream>
+using namespace std;
+int main(){
+    char str[100];
+    int i,count=1;
+    cout<<"Enter string: ";
+    cin.getline(str,100);
+    for(i=0;str[i]!='\0';i++){
+        if(str[i]==' ')
+            count++;
+    }
+    cout<<"Total words: "<<count;
+    return 0;
+}
+
+</xmp>
+</pre>
+    <h3>Output:</h3>
+    <pre>
+Enter string: I am learning cpp
+Total words: 4
+    
+    
+    </pre>
+  </div>
+  <div class="program">
+    <p class="question">35. Write a C++ method to count all vowels in a string
+
+?
+
+</p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+   #include<iostream>
+using namespace std;
+int main(){
+    char str[100];
+    int i,count=0;
+    cout<<"Enter string: ";
+    cin.getline(str,100);
+    for(i=0;str[i]!='\0';i++){
+        if(str[i]=='a'||str[i]=='e'||str[i]=='i'||
+           str[i]=='o'||str[i]=='u'||
+           str[i]=='A'||str[i]=='E'||str[i]=='I'|| 
+           str[i]=='O'||str[i]=='U'){
+            count++;
+        }
+    }
+    cout<<"Total vowels: "<<count;
+    return 0;
+}
+</xmp>
+</pre>
+    <h3>Output:</h3>
+    <pre>
+Enter string: hello
+Total vowels: 2
+    
+    
+    
+    </pre>
+  </div>
+  <div class="program">
+    <p class="question">36. Write a C++ Program to Sort Names in an Alphabetical Order?
+
+</p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+   #include<iostream>
+#include<cstring>
+using namespace std;
+int main(){
+    char name[5][20];
+    int i,j;
+    cout<<"Enter 5 names:\n";
+    for(i=0;i<5;i++)
+        cin>>name[i];
+    for(i=0;i<5;i++){
+        for(j=i+1;j<5;j++){
+            if(strcmp(name[i],name[j])>0){
+                char temp[20];
+                strcpy(temp,name[i]);
+                strcpy(name[i],name[j]);
+                strcpy(name[j],temp);
+            }
+        }
+    }
+    cout<<"\nSorted names:\n";
+    for(i=0;i<5;i++)
+        cout<<name[i]<<endl;
+    return 0;
+}
+
+</xmp>
+</pre>
+    <h3>Output:</h3>
+    <pre>
+Enter 5 names:
+Ravi
+Aman
+Simran
+Karan
+Neha
+
+Sorted names:
+Aman
+Karan
+Neha
+Ravi
+Simran
+    
+    
+    
+    </pre>
+  </div>
+  <div class="program">
+    <p class="question">37. Write a C++ method to compute the future investment value at a given interest rate for a specified number of years. 
+
+</p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+   #include<iostream>
+#include<cmath>
+using namespace std;
+double futureValue(double p,double r,int n){
+    return p*pow(1+r/100,n);
+}
+int main(){
+    double p,r;
+    int n;
+    cout<<"Enter amount: ";
+    cin>>p;
+    cout<<"Enter interest rate: ";
+    cin>>r;
+    cout<<"Enter years: ";
+    cin>>n;
+    cout<<"Future value: "<<futureValue(p,r,n);
+    return 0;
+}
+
+</xmp>
+</pre>
+    <h3>Output:</h3>
+    <pre>
+Enter amount: 1000
+Enter rate: 10
+Enter years: 2
+
+Future value: 1210
+    
+    
+    
+    </pre>
+  </div>
+  <div class="program">
+    <p class="question">38. Write a C++ method to print characters between two characters (i.e. A to P).
+
+
+</p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+   #include<iostream>
+#include<cstring>
+using namespace  std;
+void printchar(){
+    for(char c='A';c<='P';c++){
+        cout<<c<<"  ";
+    }}
+int main(){
+    printchar();
+    return 0;
+}
+</xmp>
+</pre>
+    <h3>Output:</h3>
+    <pre>
+ A  B  C  D  E  F  G  H  I  J  K  L  M  N  O  P 
+    
+    </pre>
+  </div>
+  <div class="program">
+    <p class="question">39. Write a C++ method to check whether a string is a valid password.?
+
+</p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+#include<iostream>
+using namespace std;
+int checkPassword(char str[]){
+    int i=0,len=0,digit=0;
+    while(str[i]!='\0'){
+        len++;
+        if(str[i]>='0'&&str[i]<='9')
+            digit=1;
+        i++;
+    }
+    if(len>=6&&digit==1)
+        return 1;
+    else
+        return 0;
+}
+int main(){
+    char pass[50];
+    cout<<"Enter password: ";
+    cin>>pass;
+    if(checkPassword(pass))
+        cout<<"Valid Password";
+    else
+        cout<<"Invalid Password";
+    return 0;
+}
+</xmp>
+</pre>
+    <h3>Output:</h3>
+    <pre>
+Enter password: abc123
+Valid Password
+    
+    
+    
+    </pre>
+  </div>
+  <div class="program">
+    <p class="question">40. Write a C++ method to display the current date and time.?
+
+</p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+   #include<iostream>
+#include<ctime>
+using namespace std;
+void show(){
+    time_t t=time(0);
+    tm *x=localtime(&t);
+    cout<<"Date: "<<x->tm_mday<<"/"<<x->tm_mon+1<<"/"<<x->tm_year+1900<<endl;
+    cout<<"Time: "<<x->tm_hour<<":"<<x->tm_min<<":"<<x->tm_sec;
+}
+int main(){
+    show();
+    return 0;
+}
+</xmp>
+</pre>
+    <h3>Output:</h3>
+    <pre>
+Date: 28/3/2026
+Time: 23:45:30% 
+    
+    
+    
+    </pre>
+  </div>
+  <div class="program">
+    <p class="question">41.  Write a C++ method that accepts three integers and returns true if one is the middle point between the other two integers, otherwise false?
+
+</p>
+    <h3>Code:</h3>
+    <pre>
+<xmp>
+   #include<iostream>
+using namespace std;
+bool check(int a,int b,int c){
+    if((a>b&&a<c)||(a<c&&a>b))
+        return true;
+    if((b>a&&b<c)||(b<c&&b>a))
+        return true;
+    if((c>a&&c<b)||(c<b&&c>a))
+        return true;
+    return false;
+}
+int main(){
+    int a,b,c;
+    cout<<"Enter 3 numbers: ";
+    cin>>a>>b>>c;
+    if(check(a,b,c))
+        cout<<"True";
+    else
+        cout<<"False";
+    return 0;
+}
+</xmp>
+</pre>
+    <h3>Output:</h3>
+    <pre>
+Enter 3 numbers: 2 5 8
+True
+Enter 3 numbers: 5 5 5
+False
+    
+    
+    
+    </pre>
+  </div>
+  <div class="btn-container">
+    <a href="index.html" class="btn">Home</a>
+</div>
+
+</body>
+</html>
